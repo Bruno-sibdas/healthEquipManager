@@ -68,6 +68,8 @@ main {
 
 article {
 
+    flex: 1;
+
     background-color: white;
 
     padding: 20px;
@@ -91,6 +93,40 @@ footer {
     padding: 20px;
 
     margin-top: 40px;
+
+}
+
+.cards-container {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 30px;
+
+}
+
+@media (max-width: 768px) {
+
+    .cards-container {
+
+        flex-direction: column;
+
+    }
+
+    nav ul {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+    header {
+
+        text-align: center;
+
+    }
 
 }
 
