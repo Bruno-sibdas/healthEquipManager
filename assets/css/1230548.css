@@ -70,8 +70,6 @@ main {
 
 article {
 
-    flex: 1;
-
     background-color: white;
 
     padding: 20px;
@@ -117,3 +115,4 @@ footer {
     }
 
 }
+
