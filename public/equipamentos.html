@@ -96,7 +96,7 @@
                     </h3>
 
                     <!-- Formulário -->
-                    <form>
+                    <form id="formEquipamento">
 
                         <!-- Primeira linha do formulário -->
                         <div class="row">
@@ -108,7 +108,11 @@
                                     Nome do Equipamento
                                 </label>
 
-                                <input type="text" class="form-control" placeholder="Introduza o nome do equipamento">
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="nomeEquipamento"
+                                    placeholder="Introduza o nome do equipamento">
 
                             </div>
 
@@ -119,7 +123,9 @@
                                     Categoria
                                 </label>
 
-                                <select class="form-select">
+                                <select 
+                                    class="form-select"
+                                    id="categoriaEquipamento">
 
                                     <option>
                                         Monitorização
@@ -153,7 +159,9 @@
                                     Estado
                                 </label>
 
-                                <select class="form-select">
+                                <select 
+                                    class="form-select"
+                                    id="estadoEquipamento">
 
                                     <option>
                                         Ativo
@@ -178,7 +186,11 @@
                                     Localização
                                 </label>
 
-                                <input type="text" class="form-control" placeholder="Ex: Bloco Operatório">
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="localizacaoEquipamento"
+                                    placeholder="Ex: Bloco Operatório">
 
                             </div>
 
@@ -328,6 +340,9 @@
         </p>
 
     </footer>
+
+    <!-- JavaScript da aplicação -->
+    <script src="../assets/js/1230548.js"></script>
 
 </body>
 
