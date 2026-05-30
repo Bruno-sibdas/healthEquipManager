@@ -73,7 +73,7 @@
 
         </section>
 
-        <!-- BOTÃO -->
+        <!-- Botão -->
         <section class="mb-4">
 
             <button class="btn btn-primary">
@@ -84,7 +84,125 @@
 
         </section>
 
-        <!-- TABELA -->
+        <!-- Formulário de registo de equipamentos -->
+        <section class="mb-5">
+
+            <div class="card">
+
+                <div class="card-body">
+
+                    <h3 class="mb-4">
+                        Novo Equipamento
+                    </h3>
+
+                    <!-- Formulário -->
+                    <form>
+
+                        <!-- Primeira linha do formulário -->
+                        <div class="row">
+
+                            <!-- Nome equipamento -->
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Nome do Equipamento
+                                </label>
+
+                                <input type="text" class="form-control" placeholder="Introduza o nome do equipamento">
+
+                            </div>
+
+                            <!-- Categoria -->
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Categoria
+                                </label>
+
+                                <select class="form-select">
+
+                                    <option>
+                                        Monitorização
+                                    </option>
+
+                                    <option>
+                                        Diagnóstico
+                                    </option>
+
+                                    <option>
+                                        Suporte de Vida
+                                    </option>
+
+                                    <option>
+                                        Imagiologia
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Segunda linha do formulário -->
+                        <div class="row">
+
+                            <!-- Estado -->
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Estado
+                                </label>
+
+                                <select class="form-select">
+
+                                    <option>
+                                        Ativo
+                                    </option>
+
+                                    <option>
+                                        Em manutenção
+                                    </option>
+
+                                    <option>
+                                        Inativo
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- Localização -->
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Localização
+                                </label>
+
+                                <input type="text" class="form-control" placeholder="Ex: Bloco Operatório">
+
+                            </div>
+
+                        </div>
+
+                        <!-- Botão submissão/guardar equipamento -->
+                        <button class="btn btn-success">
+
+                            Guardar Equipamento
+
+                        </button>
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Tabela de Equipamentos -->
         <section>
 
             <table class="table table-hover table-striped">
@@ -147,7 +265,7 @@
 
                         <td>
 
-                            <button class="btn btn-warning btn-sm">
+                            <button class="btn btn-warning btn-sm me-2">
                                 Editar
                             </button>
 
@@ -183,7 +301,7 @@
 
                         <td>
 
-                            <button class="btn btn-warning btn-sm">
+                            <button class="btn btn-warning btn-sm me-2">
                                 Editar
                             </button>
 
