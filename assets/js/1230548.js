@@ -73,7 +73,7 @@ formulario.addEventListener("submit", function(evento) {
                     Editar
                 </button>
 
-                <button class="btn btn-danger btn-sm">
+                <button class="btn btn-danger btn-sm btn-remover">
                     Remover
                 </button>
 
@@ -97,5 +97,35 @@ formulario.addEventListener("submit", function(evento) {
 
     // Limpa formulário
     formulario.reset();
+
+});
+
+// Remoção de equipamentos
+tabelaEquipamentos.addEventListener("click", function(evento) {
+
+    // Verifica se foi clicado um botão remover
+    if (evento.target.classList.contains("btn-remover")) {
+
+        // Confirmação do utilizador
+        const confirmar =
+            confirm("Pretende remover este equipamento?");
+
+        if (confirmar) {
+
+            // Procura a linha da tabela
+            const linha =
+                evento.target.closest("tr");
+
+            // Remove a linha
+            linha.remove();
+
+            // Mensagem Bootstrap
+            mensagemSistema.innerHTML = `
+                <div class="alert alert-warning">
+                    Equipamento removido com sucesso.
+                </div>
+            `;
+        }
+    }
 
 });
