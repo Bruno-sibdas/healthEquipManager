@@ -4,36 +4,54 @@ console.log("HealthEquipManager carregado");
 // Obtém o formulário
 const formulario = document.getElementById("formEquipamento");
 
+// Obtém a área de mensagens
+const mensagemSistema = document.getElementById("mensagemSistema");
+
 // Escuta a submissão do formulário
 formulario.addEventListener("submit", function(evento) {
 
-    // Impede o comportamento normal do formulário
+    // Impede o envio do formulário
     evento.preventDefault();
+
+    // Limpa mensagens anteriores
+    mensagemSistema.innerHTML = "";
 
     // Obtém os valores dos campos
     const nome = document.getElementById("nomeEquipamento").value;
 
     const localizacao = document.getElementById("localizacaoEquipamento").value;
 
-    // Verifica se o nome está vazio
+    // Validação do nome
     if (nome.trim() === "") {
 
-        alert("O nome do equipamento é obrigatório.");
+        mensagemSistema.innerHTML = `
+            <div class="alert alert-danger">
+                O nome do equipamento é obrigatório.
+            </div>
+        `;
 
         return;
 
     }
 
-    // Verifica se a localização está vazia
+    // Validação da localização
     if (localizacao.trim() === "") {
 
-        alert("A localização é obrigatória.");
+        mensagemSistema.innerHTML = `
+            <div class="alert alert-danger">
+                A localização é obrigatória.
+            </div>
+        `;
 
         return;
 
     }
 
-    // Se chegou aqui, a validação passou
-    alert("Equipamento validado com sucesso!");
+    // Mensagem de sucesso
+    mensagemSistema.innerHTML = `
+        <div class="alert alert-success">
+            Equipamento validado com sucesso!
+        </div>
+    `;
 
 });
