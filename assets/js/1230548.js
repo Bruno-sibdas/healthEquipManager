@@ -15,7 +15,7 @@ let proximoId = 3;
 let linhaEmEdicao = null;
 
 // Evento submit
-formulario.addEventListener("submit", function(evento) {
+formulario.addEventListener("submit", function (evento) {
 
     evento.preventDefault();
 
@@ -56,8 +56,31 @@ formulario.addEventListener("submit", function(evento) {
         return;
     }
 
-    // Criação da nova linha
-    const novaLinha = `
+    // Verifica se estamos em modo edição
+    if (linhaEmEdicao !== null) {
+
+        const colunas =
+            linhaEmEdicao.querySelectorAll("td");
+
+        colunas[1].textContent = nome;
+
+        colunas[2].textContent = categoria;
+
+        colunas[3].textContent = estado;
+
+        colunas[4].textContent = localizacao;
+
+        mensagemSistema.innerHTML = `
+        <div class="alert alert-success">
+            Equipamento atualizado com sucesso!
+        </div>
+    `;
+
+        linhaEmEdicao = null;
+
+    } else {
+
+        const novaLinha = `
         <tr>
 
             <td>${proximoId}</td>
@@ -85,11 +108,16 @@ formulario.addEventListener("submit", function(evento) {
         </tr>
     `;
 
-    // Adiciona à tabela
-    tabelaEquipamentos.innerHTML += novaLinha;
+        tabelaEquipamentos.innerHTML += novaLinha;
 
-    // Incrementa ID
-    proximoId++;
+        proximoId++;
+
+        mensagemSistema.innerHTML = `
+        <div class="alert alert-success">
+            Equipamento registado com sucesso!
+        </div>
+    `;
+    }
 
     // Mensagem de sucesso
     mensagemSistema.innerHTML = `
@@ -104,7 +132,7 @@ formulario.addEventListener("submit", function(evento) {
 });
 
 // Edição de equipamentos
-tabelaEquipamentos.addEventListener("click", function(evento) {
+tabelaEquipamentos.addEventListener("click", function (evento) {
 
     if (evento.target.classList.contains("btn-editar")) {
 
@@ -136,7 +164,7 @@ tabelaEquipamentos.addEventListener("click", function(evento) {
 });
 
 // Remoção de equipamentos
-tabelaEquipamentos.addEventListener("click", function(evento) {
+tabelaEquipamentos.addEventListener("click", function (evento) {
 
     // Verifica se foi clicado um botão remover
     if (evento.target.classList.contains("btn-remover")) {
