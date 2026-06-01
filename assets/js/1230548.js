@@ -11,6 +11,9 @@ const tabelaEquipamentos = document.getElementById("tabelaEquipamentos");
 // Contador de IDs
 let proximoId = 3;
 
+// Guarda a linha atualmente em edição
+let linhaEmEdicao = null;
+
 // Evento submit
 formulario.addEventListener("submit", function(evento) {
 
@@ -69,7 +72,7 @@ formulario.addEventListener("submit", function(evento) {
 
             <td>
 
-                <button class="btn btn-warning btn-sm me-2">
+                <button class="btn btn-warning btn-sm me-2 btn-editar">
                     Editar
                 </button>
 
@@ -97,6 +100,38 @@ formulario.addEventListener("submit", function(evento) {
 
     // Limpa formulário
     formulario.reset();
+
+});
+
+// Edição de equipamentos
+tabelaEquipamentos.addEventListener("click", function(evento) {
+
+    if (evento.target.classList.contains("btn-editar")) {
+
+        linhaEmEdicao =
+            evento.target.closest("tr");
+
+        const colunas =
+            linhaEmEdicao.querySelectorAll("td");
+
+        document.getElementById("nomeEquipamento").value =
+            colunas[1].textContent;
+
+        document.getElementById("categoriaEquipamento").value =
+            colunas[2].textContent;
+
+        document.getElementById("estadoEquipamento").value =
+            colunas[3].textContent;
+
+        document.getElementById("localizacaoEquipamento").value =
+            colunas[4].textContent;
+
+        mensagemSistema.innerHTML = `
+            <div class="alert alert-info">
+                Modo de edição ativado.
+            </div>
+        `;
+    }
 
 });
 
