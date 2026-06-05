@@ -1,0 +1,123 @@
+MODELO LÓGICO DA BASE DE DADOS - HEALTHEQUIPMANAGER
+
+1. Categoria
+
+Categoria
+---------
+PK id_categoria
+nome
+descricao
+
+
+2. Localizacao
+
+Localizacao
+-----------
+PK id_localizacao
+edificio
+piso
+servico
+sala
+
+
+3. Equipamento
+
+Equipamento
+------------
+PK id_equipamento
+UQ codigo_interno
+FK id_categoria
+FK id_localizacao
+designacao
+marca
+modelo
+numero_serie
+fabricante
+data_aquisicao
+ano_fabrico
+custo_aquisicao
+tipo_entrada
+estado
+criticidade
+observacoes
+equipamento_ativo
+
+
+4. Fornecedor
+
+Fornecedor
+----------
+PK id_fornecedor
+UQ nif
+nome_empresa
+telefone
+email
+morada
+website
+pessoa_contacto
+telefone_contacto
+tipo_fornecedor
+observacoes
+fornecedor_ativo
+
+
+5. EquipamentoFornecedor
+
+EquipamentoFornecedor
+---------------------
+PK id_equipamento, id_fornecedor
+FK id_equipamento
+FK id_fornecedor
+tipo_relacao
+
+
+6. Documento
+
+Documento
+---------
+PK id_documento
+FK id_equipamento
+FK id_fornecedor
+tipo_documento
+nome_documento
+data_documento
+data_validade
+nome_ficheiro
+caminho_ficheiro
+
+
+7. Utilizador
+
+Utilizador
+----------
+PK id_utilizador
+UQ email
+nome
+email
+password
+perfil
+utilizador_ativo
+
+
+RELACIONAMENTOS
+
+Categoria 1:N Equipamento
+Uma categoria pode estar associada a vários equipamentos.
+Cada equipamento pertence a uma única categoria.
+
+Localizacao 1:N Equipamento
+Uma localização pode conter vários equipamentos.
+Cada equipamento encontra-se numa única localização atual.
+
+Equipamento 1:N Documento
+Um equipamento pode ter vários documentos associados.
+Cada documento pertence a um equipamento.
+
+Fornecedor 1:N Documento
+Um fornecedor pode estar associado a vários documentos.
+Cada documento pode estar associado a um fornecedor.
+
+Equipamento N:M Fornecedor
+Um equipamento pode ter vários fornecedores.
+Um fornecedor pode estar associado a vários equipamentos.
+Esta relação é resolvida pela tabela EquipamentoFornecedor.
