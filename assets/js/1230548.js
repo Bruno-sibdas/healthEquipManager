@@ -119,13 +119,6 @@ formulario.addEventListener("submit", function (evento) {
     `;
     }
 
-    // Mensagem de sucesso
-    mensagemSistema.innerHTML = `
-        <div class="alert alert-success">
-            Equipamento registado com sucesso!
-        </div>
-    `;
-
     // Limpa formulário
     formulario.reset();
 

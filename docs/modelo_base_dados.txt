@@ -1,0 +1,96 @@
+MODELO CONCEPTUAL DA BASE DE DADOS - HEALTHEQUIPMANAGER
+
+Entidades principais:
+
+1. Equipamento
+Campos:
+- id_equipamento
+- codigo_interno
+- designacao
+- id_categoria
+- marca
+- modelo
+- numero_serie
+- fabricante
+- data_aquisicao
+- ano_fabrico
+- custo_aquisicao
+- tipo_entrada
+- estado
+- criticidade
+- id_localizacao
+- observacoes
+- equipamento_ativo
+
+2. Categoria
+Campos:
+- id_categoria
+- nome
+- descricao
+
+3. Localizacao
+Campos:
+- id_localizacao
+- edificio
+- piso
+- servico
+- sala
+
+4. Fornecedor
+Campos:
+- id_fornecedor
+- nome_empresa
+- nif
+- telefone
+- email
+- morada
+- website
+- pessoa_contacto
+- telefone_contacto
+- tipo_fornecedor
+- observacoes
+- fornecedor_ativo
+
+5. Documento
+Campos:
+- id_documento
+- id_equipamento
+- id_fornecedor
+- tipo_documento
+- nome_documento
+- data_documento
+- data_validade
+- nome_ficheiro
+- caminho_ficheiro
+
+6. EquipamentoFornecedor
+Campos:
+- id_equipamento
+- id_fornecedor
+- tipo_relacao
+
+7. Utilizador
+Campos:
+- id_utilizador
+- nome
+- email
+- password
+- perfil
+- utilizador_ativo
+
+
+Relacionamentos:
+
+Uma categoria pode ter vários equipamentos.
+Cada equipamento pertence a uma categoria.
+
+Uma localização pode ter vários equipamentos.
+Cada equipamento pertence a uma localização.
+
+Um equipamento pode ter vários documentos.
+Cada documento pertence a um equipamento.
+
+Um fornecedor pode estar associado a vários equipamentos.
+Um equipamento pode estar associado a vários fornecedores.
+
+A tabela EquipamentoFornecedor resolve a relação muitos-para-muitos entre Equipamento e Fornecedor.
