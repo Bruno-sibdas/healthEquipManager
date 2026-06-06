@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Localizações - Área Privada - HealthEquipManager</title>
+    <title>Documentos - Área Privada - HealthEquipManager</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -66,21 +66,17 @@
 
     <main class="container">
 
-        <!-- Título -->
-
         <section class="mb-4">
 
             <h2>
-                Gestão de Localizações
+                Gestão de Documentos
             </h2>
 
             <p>
-                Área privada para gestão das localizações físicas dos equipamentos médicos.
+                Área privada para associação de documentação técnica e administrativa aos equipamentos médicos.
             </p>
 
         </section>
-
-        <!-- Formulário -->
 
         <section class="mb-5">
 
@@ -89,7 +85,7 @@
                 <div class="card-body">
 
                     <h3 class="mb-4">
-                        Nova Localização
+                        Novo Documento
                     </h3>
 
                     <form>
@@ -99,20 +95,56 @@
                             <div class="col-md-6 mb-3">
 
                                 <label class="form-label">
-                                    Edifício
+                                    Equipamento Associado
                                 </label>
 
-                                <input type="text" class="form-control" placeholder="Ex: Edifício Principal">
+                                <select class="form-select">
+
+                                    <option>
+                                        Monitor Cardíaco
+                                    </option>
+
+                                    <option>
+                                        Ventilador Mecânico
+                                    </option>
+
+                                    <option>
+                                        Bomba de Infusão
+                                    </option>
+
+                                </select>
 
                             </div>
 
                             <div class="col-md-6 mb-3">
 
                                 <label class="form-label">
-                                    Piso
+                                    Tipo de Documento
                                 </label>
 
-                                <input type="text" class="form-control" placeholder="Ex: Piso 2">
+                                <select class="form-select">
+
+                                    <option>
+                                        Manual de Utilizador
+                                    </option>
+
+                                    <option>
+                                        Manual de Serviço
+                                    </option>
+
+                                    <option>
+                                        Certificado de Calibração
+                                    </option>
+
+                                    <option>
+                                        Contrato de Manutenção
+                                    </option>
+
+                                    <option>
+                                        Relatório Técnico
+                                    </option>
+
+                                </select>
 
                             </div>
 
@@ -123,28 +155,48 @@
                             <div class="col-md-6 mb-3">
 
                                 <label class="form-label">
-                                    Serviço
+                                    Nome do Documento
                                 </label>
 
-                                <input type="text" class="form-control" placeholder="Ex: UCI">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Ex: Manual técnico do ventilador">
 
                             </div>
 
                             <div class="col-md-6 mb-3">
 
                                 <label class="form-label">
-                                    Sala
+                                    Data do Documento
                                 </label>
 
-                                <input type="text" class="form-control" placeholder="Ex: Sala 12">
+                                <input
+                                    type="date"
+                                    class="form-control">
 
                             </div>
 
                         </div>
 
-                        <button type="submit" class="btn btn-success">
+                        <div class="mb-3">
 
-                            Guardar Localização
+                            <label class="form-label">
+                                Nome ou Caminho do Ficheiro
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Ex: documentos/manual_ventilador.pdf">
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-success">
+
+                            Guardar Documento
 
                         </button>
 
@@ -156,8 +208,6 @@
 
         </section>
 
-        <!-- Tabela -->
-
         <section>
 
             <table class="table table-hover table-striped">
@@ -168,13 +218,15 @@
 
                         <th>ID</th>
 
-                        <th>Edifício</th>
+                        <th>Equipamento</th>
 
-                        <th>Piso</th>
+                        <th>Tipo</th>
 
-                        <th>Serviço</th>
+                        <th>Nome</th>
 
-                        <th>Sala</th>
+                        <th>Data</th>
+
+                        <th>Ficheiro</th>
 
                         <th>Ações</th>
 
@@ -188,13 +240,15 @@
 
                         <td>1</td>
 
-                        <td>Edifício Principal</td>
+                        <td>Ventilador Mecânico</td>
 
-                        <td>2</td>
+                        <td>Manual de Serviço</td>
 
-                        <td>UCI</td>
+                        <td>Manual técnico Evita V500</td>
 
-                        <td>12</td>
+                        <td>2026-01-10</td>
+
+                        <td>manual_evita_v500.pdf</td>
 
                         <td>
 
@@ -214,13 +268,15 @@
 
                         <td>2</td>
 
-                        <td>Bloco Cirúrgico</td>
+                        <td>Monitor Cardíaco</td>
 
-                        <td>1</td>
+                        <td>Certificado de Calibração</td>
 
-                        <td>Operatório</td>
+                        <td>Certificado calibração 2026</td>
 
-                        <td>5</td>
+                        <td>2026-02-15</td>
+
+                        <td>certificado_monitor.pdf</td>
 
                         <td>
 
