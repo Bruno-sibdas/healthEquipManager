@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Equipamentos - Área Privada - HealthEquipManager</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS próprio do aluno -->
+    <link rel="stylesheet" href="../assets/css/1230548.css">
+
+</head>
+
+<body>
+
+    <!-- Cabeçalho da área privada -->
+    <header class="d-flex justify-content-between align-items-center">
+
+        <h1>
+            HealthEquipManager
+        </h1>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="equipamentos.html">
+                        Equipamentos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Fornecedores
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Relatórios
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main class="container">
+
+        <!-- Título e descrição -->
+        <section class="mb-4">
+
+            <h2>
+                Gestão de Equipamentos
+            </h2>
+
+            <p>
+                Área privada para registo, consulta, edição e remoção de equipamentos médicos.
+            </p>
+
+        </section>
+
+        <!-- Botão de ação -->
+        <section class="mb-4">
+
+            <button class="btn btn-primary">
+                Adicionar Equipamento
+            </button>
+
+        </section>
+
+        <!-- Área de mensagens -->
+        <section class="mb-4">
+
+            <div id="mensagemSistema"></div>
+
+        </section>
+
+        <!-- Formulário de registo de equipamentos -->
+        <section class="mb-5">
+
+            <div class="card">
+
+                <div class="card-body">
+
+                    <h3 class="mb-4">
+                        Novo Equipamento
+                    </h3>
+
+                    <form id="formEquipamento">
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Nome do Equipamento
+                                </label>
+
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="nomeEquipamento"
+                                    placeholder="Introduza o nome do equipamento">
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Categoria
+                                </label>
+
+                                <select 
+                                    class="form-select" 
+                                    id="categoriaEquipamento">
+
+                                    <option>
+                                        Monitorização
+                                    </option>
+
+                                    <option>
+                                        Diagnóstico
+                                    </option>
+
+                                    <option>
+                                        Suporte de Vida
+                                    </option>
+
+                                    <option>
+                                        Imagiologia
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Estado
+                                </label>
+
+                                <select 
+                                    class="form-select" 
+                                    id="estadoEquipamento">
+
+                                    <option>
+                                        Ativo
+                                    </option>
+
+                                    <option>
+                                        Em manutenção
+                                    </option>
+
+                                    <option>
+                                        Inativo
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Localização
+                                </label>
+
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="localizacaoEquipamento"
+                                    placeholder="Ex: Bloco Operatório">
+
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-success">
+                            Guardar Equipamento
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Tabela de equipamentos -->
+        <section>
+
+            <table class="table table-hover table-striped">
+
+                <thead class="table-dark">
+
+                    <tr>
+
+                        <th>
+                            ID
+                        </th>
+
+                        <th>
+                            Nome
+                        </th>
+
+                        <th>
+                            Categoria
+                        </th>
+
+                        <th>
+                            Estado
+                        </th>
+
+                        <th>
+                            Localização
+                        </th>
+
+                        <th>
+                            Ações
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tabelaEquipamentos">
+
+                    <tr>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            Monitor Cardíaco
+                        </td>
+
+                        <td>
+                            Monitorização
+                        </td>
+
+                        <td>
+                            Ativo
+                        </td>
+
+                        <td>
+                            Bloco Operatório
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-warning btn-sm me-2 btn-editar">
+                                Editar
+                            </button>
+
+                            <button class="btn btn-danger btn-sm btn-remover">
+                                Remover
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            2
+                        </td>
+
+                        <td>
+                            Ventilador Mecânico
+                        </td>
+
+                        <td>
+                            Suporte de Vida
+                        </td>
+
+                        <td>
+                            Em manutenção
+                        </td>
+
+                        <td>
+                            UCI
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-warning btn-sm me-2 btn-editar">
+                                Editar
+                            </button>
+
+                            <button class="btn btn-danger btn-sm btn-remover">
+                                Remover
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 HealthEquipManager - Área Privada
+        </p>
+
+    </footer>
+
+    <!-- JavaScript da aplicação -->
+    <script src="../assets/js/1230548.js"></script>
+
+</body>
+
+</html>
