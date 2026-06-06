@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fornecedores - Área Privada - HealthEquipManager</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/1230548.css">
+
+</head>
+
+<body>
+
+    <header class="d-flex justify-content-between align-items-center">
+
+        <h1>
+            HealthEquipManager
+        </h1>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="equipamentos.html">
+                        Equipamentos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="fornecedores.html">
+                        Fornecedores
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Relatórios
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main class="container">
+
+        <section class="mb-4">
+
+            <h2>
+                Gestão de Fornecedores
+            </h2>
+
+            <p>
+                Área privada para registo e consulta de fornecedores associados aos equipamentos médicos.
+            </p>
+
+        </section>
+
+        <section class="mb-5">
+
+            <div class="card">
+
+                <div class="card-body">
+
+                    <h3 class="mb-4">
+                        Novo Fornecedor
+                    </h3>
+
+                    <form>
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Nome da Empresa
+                                </label>
+
+                                <input type="text" class="form-control" placeholder="Ex: Philips Healthcare">
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    NIF
+                                </label>
+
+                                <input type="text" class="form-control" placeholder="Ex: 500000000">
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Telefone
+                                </label>
+
+                                <input type="text" class="form-control" placeholder="Ex: 912345678">
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Email
+                                </label>
+
+                                <input type="email" class="form-control" placeholder="Ex: geral@empresa.pt">
+
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Tipo de Fornecedor
+                            </label>
+
+                            <select class="form-select">
+
+                                <option>
+                                    Fabricante
+                                </option>
+
+                                <option>
+                                    Distribuidor
+                                </option>
+
+                                <option>
+                                    Assistência Técnica
+                                </option>
+
+                                <option>
+                                    Consumíveis ou Acessórios
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-success">
+                            Guardar Fornecedor
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <table class="table table-hover table-striped">
+
+                <thead class="table-dark">
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Empresa</th>
+
+                        <th>NIF</th>
+
+                        <th>Telefone</th>
+
+                        <th>Email</th>
+
+                        <th>Tipo</th>
+
+                        <th>Ações</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1</td>
+
+                        <td>Philips Healthcare</td>
+
+                        <td>500000001</td>
+
+                        <td>912345678</td>
+
+                        <td>geral@philips.pt</td>
+
+                        <td>Fabricante</td>
+
+                        <td>
+
+                            <button class="btn btn-warning btn-sm me-2">
+                                Editar
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                Remover
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>2</td>
+
+                        <td>Dräger Portugal</td>
+
+                        <td>500000002</td>
+
+                        <td>913456789</td>
+
+                        <td>contacto@draeger.pt</td>
+
+                        <td>Assistência Técnica</td>
+
+                        <td>
+
+                            <button class="btn btn-warning btn-sm me-2">
+                                Editar
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                Remover
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 HealthEquipManager - Área Privada
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
