@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fornecedores - Área Privada - HealthEquipManager</title>
+    <title>Conteúdos Públicos - Área Privada - HealthEquipManager</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -81,11 +81,11 @@
         <section class="mb-4">
 
             <h2>
-                Gestão de Fornecedores
+                Gestão de Conteúdos Públicos
             </h2>
 
             <p>
-                Área privada para registo e consulta de fornecedores associados aos equipamentos médicos.
+                Área reservada para atualizar textos e informações apresentadas na página pública da aplicação.
             </p>
 
         </section>
@@ -97,89 +97,64 @@
                 <div class="card-body">
 
                     <h3 class="mb-4">
-                        Novo Fornecedor
+                        Editar Conteúdo Institucional
                     </h3>
 
                     <form>
 
-                        <div class="row">
+                        <div class="mb-3">
 
-                            <div class="col-md-6 mb-3">
+                            <label class="form-label">
+                                Título da página pública
+                            </label>
 
-                                <label class="form-label">
-                                    Nome da Empresa
-                                </label>
-
-                                <input type="text" class="form-control" placeholder="Ex: Philips Healthcare">
-
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-
-                                <label class="form-label">
-                                    NIF
-                                </label>
-
-                                <input type="text" class="form-control" placeholder="Ex: 500000000">
-
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col-md-6 mb-3">
-
-                                <label class="form-label">
-                                    Telefone
-                                </label>
-
-                                <input type="text" class="form-control" placeholder="Ex: 912345678">
-
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-
-                                <label class="form-label">
-                                    Email
-                                </label>
-
-                                <input type="email" class="form-control" placeholder="Ex: geral@empresa.pt">
-
-                            </div>
+                            <input 
+                                type="text" 
+                                class="form-control"
+                                value="Gestão de Equipamentos Biomédicos">
 
                         </div>
 
                         <div class="mb-3">
 
                             <label class="form-label">
-                                Tipo de Fornecedor
+                                Texto de apresentação
                             </label>
 
-                            <select class="form-select">
+                            <textarea 
+                                class="form-control" 
+                                rows="4">Sistema de informação para apoio à gestão do inventário hospitalar de equipamentos médicos.</textarea>
 
-                                <option>
-                                    Fabricante
-                                </option>
+                        </div>
 
-                                <option>
-                                    Distribuidor
-                                </option>
+                        <div class="mb-3">
 
-                                <option>
-                                    Assistência Técnica
-                                </option>
+                            <label class="form-label">
+                                Contacto institucional
+                            </label>
 
-                                <option>
-                                    Consumíveis ou Acessórios
-                                </option>
+                            <input 
+                                type="email" 
+                                class="form-control"
+                                value="contacto@healthequipmanager.pt">
 
-                            </select>
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Horário de apoio
+                            </label>
+
+                            <input 
+                                type="text" 
+                                class="form-control"
+                                value="Segunda a sexta-feira, 09:00 - 18:00">
 
                         </div>
 
                         <button type="submit" class="btn btn-success">
-                            Guardar Fornecedor
+                            Guardar Conteúdo
                         </button>
 
                     </form>
@@ -192,6 +167,10 @@
 
         <section>
 
+            <h2>
+                Conteúdos registados
+            </h2>
+
             <table class="table table-hover table-striped">
 
                 <thead class="table-dark">
@@ -200,15 +179,11 @@
 
                         <th>ID</th>
 
-                        <th>Empresa</th>
+                        <th>Secção</th>
 
-                        <th>NIF</th>
+                        <th>Descrição</th>
 
-                        <th>Telefone</th>
-
-                        <th>Email</th>
-
-                        <th>Tipo</th>
+                        <th>Última atualização</th>
 
                         <th>Ações</th>
 
@@ -222,15 +197,11 @@
 
                         <td>1</td>
 
-                        <td>Philips Healthcare</td>
+                        <td>Página inicial</td>
 
-                        <td>500000001</td>
+                        <td>Texto principal de apresentação</td>
 
-                        <td>912345678</td>
-
-                        <td>geral@philips.pt</td>
-
-                        <td>Fabricante</td>
+                        <td>2026-05-20</td>
 
                         <td>
 
@@ -250,15 +221,11 @@
 
                         <td>2</td>
 
-                        <td>Dräger Portugal</td>
+                        <td>Contactos</td>
 
-                        <td>500000002</td>
+                        <td>Email e horário de apoio</td>
 
-                        <td>913456789</td>
-
-                        <td>contacto@draeger.pt</td>
-
-                        <td>Assistência Técnica</td>
+                        <td>2026-05-22</td>
 
                         <td>
 
