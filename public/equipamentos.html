@@ -30,7 +30,7 @@
 
                 <li>
                     <a href="index.html">
-                        Dashboard
+                        Início
                     </a>
                 </li>
 
@@ -41,14 +41,20 @@
                 </li>
 
                 <li>
-                    <a href="#">
-                        Fornecedores
+                    <a href="index.html#sobre">
+                        Sobre
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
-                        Relatórios
+                    <a href="index.html#contactos">
+                        Contactos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../private/dashboard.html">
+                        Área Privada
                     </a>
                 </li>
 
@@ -60,159 +66,67 @@
 
     <main class="container">
 
-        <!-- TÍTULO E DESCRIÇÃO -->
         <section class="mb-4">
 
             <h2>
-                Gestão de Equipamentos
+                Equipamentos Médicos
             </h2>
 
             <p>
-                Lista de equipamentos biomédicos registados no sistema.
+                Esta página apresenta exemplos de equipamentos que podem fazer parte de um inventário hospitalar.
+            </p>
+
+            <p>
+                A gestão completa dos equipamentos é realizada na área privada da aplicação.
             </p>
 
         </section>
 
-        <!-- Botão -->
-        <section class="mb-4">
+        <section class="row mt-4">
 
-            <button class="btn btn-primary">
+            <article class="col-md-4 mb-4">
 
-                Adicionar Equipamento
+                <h3>
+                    Monitor Cardíaco
+                </h3>
 
-            </button>
+                <p>
+                    Equipamento utilizado para monitorização de sinais vitais em contexto clínico.
+                </p>
+
+            </article>
+
+            <article class="col-md-4 mb-4">
+
+                <h3>
+                    Ventilador Mecânico
+                </h3>
+
+                <p>
+                    Equipamento de suporte de vida utilizado no apoio ventilatório de doentes críticos.
+                </p>
+
+            </article>
+
+            <article class="col-md-4 mb-4">
+
+                <h3>
+                    Bomba de Infusão
+                </h3>
+
+                <p>
+                    Dispositivo utilizado para administração controlada de medicamentos e fluidos.
+                </p>
+
+            </article>
 
         </section>
 
-        <!-- Área de mensagens -->
-        <section class="mb-4">
-
-            <div id="mensagemSistema"></div>
-
-        </section>
-
-        <!-- Formulário de registo de equipamentos -->
         <section class="mb-5">
 
-            <div class="card">
-
-                <div class="card-body">
-
-                    <h3 class="mb-4">
-                        Novo Equipamento
-                    </h3>
-
-                    <!-- Formulário -->
-                    <form id="formEquipamento">
-
-                        <!-- Primeira linha do formulário -->
-                        <div class="row">
-
-                            <!-- Nome equipamento -->
-                            <div class="col-md-6 mb-3">
-
-                                <label class="form-label">
-                                    Nome do Equipamento
-                                </label>
-
-                                <input type="text" class="form-control" id="nomeEquipamento"
-                                    placeholder="Introduza o nome do equipamento">
-
-                            </div>
-
-                            <!-- Categoria -->
-                            <div class="col-md-6 mb-3">
-
-                                <label class="form-label">
-                                    Categoria
-                                </label>
-
-                                <select class="form-select" id="categoriaEquipamento">
-
-                                    <option>
-                                        Monitorização
-                                    </option>
-
-                                    <option>
-                                        Diagnóstico
-                                    </option>
-
-                                    <option>
-                                        Suporte de Vida
-                                    </option>
-
-                                    <option>
-                                        Imagiologia
-                                    </option>
-
-                                </select>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Segunda linha do formulário -->
-                        <div class="row">
-
-                            <!-- Estado -->
-                            <div class="col-md-6 mb-3">
-
-                                <label class="form-label">
-                                    Estado
-                                </label>
-
-                                <select class="form-select" id="estadoEquipamento">
-
-                                    <option>
-                                        Ativo
-                                    </option>
-
-                                    <option>
-                                        Em manutenção
-                                    </option>
-
-                                    <option>
-                                        Inativo
-                                    </option>
-
-                                </select>
-
-                            </div>
-
-                            <!-- Localização -->
-                            <div class="col-md-6 mb-4">
-
-                                <label class="form-label">
-                                    Localização
-                                </label>
-
-                                <input type="text" class="form-control" id="localizacaoEquipamento"
-                                    placeholder="Ex: Bloco Operatório">
-
-                            </div>
-
-                        </div>
-
-                        <!-- Botão submissão/guardar equipamento -->
-                        <button type="submit" class="btn btn-success">
-
-                            Guardar Equipamento
-
-                        </button>
-
-                    </form>
-
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Tabela de Equipamentos -->
-        <section>
+            <h2>
+                Consulta pública
+            </h2>
 
             <table class="table table-hover table-striped">
 
@@ -220,105 +134,53 @@
 
                     <tr>
 
-                        <th>
-                            ID
-                        </th>
+                        <th>Equipamento</th>
 
-                        <th>
-                            Nome
-                        </th>
+                        <th>Categoria</th>
 
-                        <th>
-                            Categoria
-                        </th>
+                        <th>Criticidade</th>
 
-                        <th>
-                            Estado
-                        </th>
-
-                        <th>
-                            Localização
-                        </th>
-
-                        <th>
-                            Ações
-                        </th>
+                        <th>Estado</th>
 
                     </tr>
 
                 </thead>
 
-                <tbody id="tabelaEquipamentos">
+                <tbody>
 
                     <tr>
 
-                        <td>
-                            1
-                        </td>
+                        <td>Monitor Cardíaco</td>
 
-                        <td>
-                            Monitor Cardíaco
-                        </td>
+                        <td>Monitorização</td>
 
-                        <td>
-                            Monitorização
-                        </td>
+                        <td>Alta</td>
 
-                        <td>
-                            Ativo
-                        </td>
-
-                        <td>
-                            Bloco Operatório
-                        </td>
-
-                        <td>
-
-                            <button class="btn btn-warning btn-sm me-2 btn-editar">
-                                Editar
-                            </button>
-
-                            <button class="btn btn-danger btn-sm btn-remover">
-                                Remover
-                            </button>
-
-                        </td>
+                        <td>Ativo</td>
 
                     </tr>
 
                     <tr>
 
-                        <td>
-                            2
-                        </td>
+                        <td>Ventilador Mecânico</td>
 
-                        <td>
-                            Ventilador Mecânico
-                        </td>
+                        <td>Suporte de Vida</td>
 
-                        <td>
-                            Suporte de Vida
-                        </td>
+                        <td>Suporte de vida</td>
 
-                        <td>
-                            Em manutenção
-                        </td>
+                        <td>Ativo</td>
 
-                        <td>
-                            UCI
-                        </td>
+                    </tr>
 
-                        <td>
+                    <tr>
 
-                            <button class="btn btn-warning btn-sm me-2 btn-editar">
-                                Editar
-                            </button>
+                        <td>Bomba de Infusão</td>
 
-                            <button class="btn btn-danger btn-sm btn-remover">
-                                Remover
-                            </button>
+                        <td>Terapia</td>
 
-                        </td>
+                        <td>Média</td>
+
+                        <td>Ativo</td>
 
                     </tr>
 
@@ -337,9 +199,6 @@
         </p>
 
     </footer>
-
-    <!-- JavaScript da aplicação -->
-    <script src="../assets/js/1230548.js"></script>
 
 </body>
 

@@ -16,7 +16,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet"
-        href="../assets/css/1230548.css">
+          href="../assets/css/1230548.css">
 
 </head>
 
@@ -34,7 +34,7 @@
 
                 <li>
                     <a href="index.html">
-                        Dashboard
+                        Início
                     </a>
                 </li>
 
@@ -45,14 +45,26 @@
                 </li>
 
                 <li>
-                    <a href="#">
-                        Fornecedores
+                    <a href="#sobre">
+                        Sobre
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
-                        Relatórios
+                    <a href="#modulos">
+                        Módulos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contactos">
+                        Contactos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../private/dashboard.html">
+                        Área Privada
                     </a>
                 </li>
 
@@ -64,55 +76,107 @@
 
     <main class="container">
 
-        <section>
+        <!-- Secção principal pública -->
+        <section class="mb-5">
 
             <h2>
-                Gestão de Equipamentos Biomédicos
+                Sistema de Apoio ao Inventário Hospitalar
             </h2>
 
             <p>
-                Sistema de informação para gestão de equipamentos clínicos.
+                O HealthEquipManager é uma aplicação web desenvolvida para apoiar a gestão de equipamentos médicos em contexto hospitalar.
+            </p>
+
+            <p>
+                A plataforma permite organizar informação sobre equipamentos, localizações, fornecedores, documentação técnica e indicadores de gestão.
+            </p>
+
+            <a href="../private/dashboard.html" class="btn btn-primary">
+                Entrar na Área Privada
+            </a>
+
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre" class="mb-5">
+
+            <h2>
+                Sobre o Sistema
+            </h2>
+
+            <p>
+                Em instituições de saúde, a gestão de equipamentos médicos exige organização, rastreabilidade e acesso rápido à informação técnica.
+            </p>
+
+            <p>
+                Este sistema foi pensado para simular uma solução de inventário hospitalar, permitindo apoiar futuramente processos de manutenção, auditoria e gestão documental.
             </p>
 
         </section>
 
-        <section class="row mt-4">
+        <!-- Módulos -->
+        <section id="modulos" class="mb-5">
 
-            <article class="col-md-4 mb-4">
+            <h2>
+                Principais Módulos
+            </h2>
 
-                <h3>
-                    Equipamentos Ativos
-                </h3>
+            <section class="row mt-4">
 
-                <p>
-                    120 equipamentos registados.
-                </p>
+                <article class="col-md-4 mb-4">
 
-            </article>
+                    <h3>
+                        Equipamentos
+                    </h3>
 
-            <article class="col-md-4 mb-4">
+                    <p>
+                        Registo, consulta e controlo dos equipamentos médicos existentes no hospital.
+                    </p>
 
-                <h3>
-                    Fornecedores
-                </h3>
+                </article>
 
-                <p>
-                    32 fornecedores ativos.
-                </p>
+                <article class="col-md-4 mb-4">
 
-            </article>
+                    <h3>
+                        Fornecedores
+                    </h3>
 
-            <article class="col-md-4 mb-4">
+                    <p>
+                        Gestão de fabricantes, distribuidores e entidades de assistência técnica.
+                    </p>
 
-                <h3>
-                    Relatórios
-                </h3>
+                </article>
 
-                <p>
-                    18 relatórios disponíveis.
-                </p>
+                <article class="col-md-4 mb-4">
 
-            </article>
+                    <h3>
+                        Documentação
+                    </h3>
+
+                    <p>
+                        Organização de manuais, certificados, contratos e relatórios técnicos.
+                    </p>
+
+                </article>
+
+            </section>
+
+        </section>
+
+        <!-- Contactos -->
+        <section id="contactos" class="mb-5">
+
+            <h2>
+                Contactos
+            </h2>
+
+            <p>
+                Email: contacto@healthequipmanager.pt
+            </p>
+
+            <p>
+                Horário de apoio: segunda a sexta-feira, das 09:00 às 18:00.
+            </p>
 
         </section>
 
@@ -121,7 +185,7 @@
     <footer>
 
         <p>
-            2026 HealthEquipManager - Engenharia Biomédica ISEP
+            © 2026 HealthEquipManager - Engenharia Biomédica ISEP
         </p>
 
     </footer>
